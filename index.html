@@ -86,61 +86,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
-	padding-bottom: 20px;
+    padding-bottom: 20px;
     width: 100%; /* Растягиваем по ширине контейнера */
-    
 }
 
-        .toggle-container {
-            position: relative;
-            width: 366px;
-            height: 48px;
-            border-radius: 100px;
-            background: #ffffff;
-            border: 2px solid #ddd; /* Добавлена граница для видимости */
-            box-shadow: inset 4px 4px 9px rgba(0, 0, 0, 0.25);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            
-        }
+.toggle-container {
+    position: relative;
+    width: 366px;
+    max-width: 100%; /* Теперь контейнер не выйдет за границы экрана */
+    height: 48px;
+    border-radius: 100px;
+    background: #ffffff;
+    border: 2px solid #ddd;
+    box-shadow: inset 4px 4px 9px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Кнопка начнёт с левого края */
+    padding: 0 8px;
+    overflow: hidden; /* Предотвращаем выход кнопки за пределы */
+}
 
-        /* Скрытый чекбокс */
-        .toggle-checkbox {
-            display: none;
-        }
+.toggle-checkbox {
+    display: none;
+}
 
-        /* Кнопка-переключатель */
-        .toggle-button {
-            position: absolute;
-            width: 277px;
-            height: 32px;
-            border-radius: 16px;
-            background: linear-gradient(to bottom, #2c2c7a, #0c0c3c);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            left: 8px;
-        }
+/* Кнопка-переключатель */
+.toggle-button {
+    position: absolute;
+    width: 50%; /* Сделаем размер кнопки пропорциональным */
+    height: 32px;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, #2c2c7a, #0c0c3c);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    left: 8px; /* Начальная позиция */
+}
 
-        /* Состояние "чётная неделя" */
-        .toggle-checkbox:checked + .toggle-button {
-            left: 81px;
-            background: linear-gradient(to bottom, #1c5c1c, #0c3c0c);
-        }
+/* Состояние "чётная неделя" */
+.toggle-checkbox:checked + .toggle-button {
+    left: auto;
+    right: 8px; /* Вместо фиксированного left двигаем вправо */
+    background: linear-gradient(to bottom, #1c5c1c, #0c3c0c);
+}
 
-        /* Текст внутри кнопки */
-        .toggle-button::after {
-            content: "нечётная неделя";
-        }
+/* Текст внутри кнопки */
+.toggle-button::after {
+    content: "нечётная неделя";
+}
 
-        .toggle-checkbox:checked + .toggle-button::after {
-            content: "чётная неделя";
-        }
+.toggle-checkbox:checked + .toggle-button::after {
+    content: "чётная неделя";
+}
+
 
 
     </style>
