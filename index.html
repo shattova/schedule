@@ -64,7 +64,7 @@
         }
         .numbers {
             margin-left: 25px;
-			padding-bottom: 15px;
+			
         }
         .circle {
             width: 30px;
@@ -77,9 +77,70 @@
             border-radius: 50%;
             font-size: 16px;
             font-weight: bold;
-            margin-bottom: 5px;
+            
         }
 
+/* Подложка */
+
+.toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding-bottom: 20px;
+    width: 100%; /* Растягиваем по ширине контейнера */
+    
+}
+
+        .toggle-container {
+            position: relative;
+            width: 366px;
+            height: 48px;
+            border-radius: 100px;
+            background: #ffffff;
+            border: 2px solid #ddd; /* Добавлена граница для видимости */
+            box-shadow: inset 4px 4px 9px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        /* Скрытый чекбокс */
+        .toggle-checkbox {
+            display: none;
+        }
+
+        /* Кнопка-переключатель */
+        .toggle-button {
+            position: absolute;
+            width: 277px;
+            height: 32px;
+            border-radius: 16px;
+            background: linear-gradient(to bottom, #2c2c7a, #0c0c3c);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            left: 8px;
+        }
+
+        /* Состояние "чётная неделя" */
+        .toggle-checkbox:checked + .toggle-button {
+            left: 81px;
+            background: linear-gradient(to bottom, #1c5c1c, #0c3c0c);
+        }
+
+        /* Текст внутри кнопки */
+        .toggle-button::after {
+            content: "нечётная неделя";
+        }
+
+        .toggle-checkbox:checked + .toggle-button::after {
+            content: "чётная неделя";
+        }
 
 
     </style>
@@ -88,25 +149,98 @@
     <div class="container">
         <h1 style="
   font-family: Montserrat;
-  font-size: 51px;
+  font-size: 61px;
   font-weight: 400;
   line-height: 58px;
   text-align: center;
 color: black;">добро<br> <span style="font-weight: 487;"> пожаловать </span> <br> <span style="font-weight: bold;"> сюда </span> </h1>
         
-        <button id="toggle-week" class="odd-week">нечетная неделька</button>
+<div>
+
+    <div class="toggle-wrapper">
+        <label class="toggle-container">
+            <input type="checkbox" class="toggle-checkbox">
+            <div class="toggle-button"></div>
+        </label>
+    </div>
+        </div>
+
+       
         
         <div class="schedule">
             <div class="day">
                 <h2 class="title_day">понедельник <br> <span style="color: black; font-weight: 100; font-size: 20px">- день бездельник</span ></h2>
                 <div class="numbers">
-                    <span class="circle">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <span class="circle">5</span>
-                    <span class="circle">6</span>
-                    <span class="circle">7</span>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
                 </div>
             </div>
             
@@ -194,25 +328,8 @@ color: black;">добро<br> <span style="font-weight: 487;"> пожалова�
             </div>
 
 
-        </div>
     </div>
     
-    <script>
-        document.getElementById("toggle-week").addEventListener("click", function() {
-            let button = this;
-            let circles = document.querySelectorAll(".circle");
-            if (button.classList.contains("odd-week")) {
-                button.classList.remove("odd-week");
-                button.classList.add("even-week");
-                button.textContent = "четная неделька";
-                circles.forEach(circle => circle.style.background = "green");
-            } else {
-                button.classList.remove("even-week");
-                button.classList.add("odd-week");
-                button.textContent = "нечетная неделька";
-                circles.forEach(circle => circle.style.background = "navy");
-            }
-        });
-    </script>
+    
 </body>
 </html>
