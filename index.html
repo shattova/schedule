@@ -48,7 +48,7 @@
         .even-week {
             background: green;
         }
-        .schedule .day {
+        .schedule .day, .schedule .day1{
             background: white;
             padding: 15px;
             margin: 10px 0 30px 0;
@@ -62,6 +62,12 @@
               inset -1px -1px 2px rgba(216,216,216,0.5),
               inset 1px 1px 2px rgba(255,255,255,0.3);
         }
+
+		.day1.hidden {
+        	display: none;
+		}
+
+		
         .numbers {
             margin-left: 25px;
 			
@@ -79,6 +85,18 @@
             font-weight: bold;
             
         }
+
+#day1.hidden {
+display: none;
+}
+
+#day2 {
+display: none;
+}
+
+#day2.hidden {
+display: block;
+}
 
 /* Подложка */
 
@@ -110,8 +128,7 @@
 .toggle-checkbox {
     display: none;
 }
-
-/* Кнопка-переключатель */
+       /* Кнопка-переключатель */
 .toggle-button {
     position: absolute;
     width: 50%; /* Сделаем размер кнопки пропорциональным */
@@ -146,7 +163,6 @@ padding: 0 10px;
 }
 
 
-
     </style>
 </head>
 <body>
@@ -163,7 +179,7 @@ color: black;">добро<br> <span style="font-weight: 487;"> пожалова�
 
     <div class="toggle-wrapper">
         <label class="toggle-container">
-            <input type="checkbox" class="toggle-checkbox">
+            <input type="checkbox" class="toggle-checkbox" id="toggleCheckbox">
             <div class="toggle-button"></div>
         </label>
     </div>
@@ -172,12 +188,171 @@ color: black;">добро<br> <span style="font-weight: 487;"> пожалова�
        
         
         <div class="schedule">
+<div id="day1">
+
+
+
             <div class="day">
                 <h2 class="title_day">понедельник <br> <span style="color: black; font-weight: 100; font-size: 20px">- день бездельник</span ></h2>
                 <div class="numbers">
 					<div class="urok" style="display: flex;">
                     	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
 							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+            
+            <div class="day">
+                <h2 class="title_day">вторник <br> <span style="color: black; font-weight: 100; font-size: 20px">- повторник</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+           
+            
+            <div class="day">
+                <h2 class="title_day">среда <br> <span style="color: black; font-weight: 100; font-size: 20px">- тамада</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
 								<p style="color: #202020;
   									font-size: 18px;
   									font-weight: 500; margin: 0;"> Математика </p>
@@ -249,91 +424,740 @@ color: black;">добро<br> <span style="font-weight: 487;"> пожалова�
             </div>
             
             <div class="day">
-                
- <h2 class="title_day">вторник <br> <span style="color: black; font-weight: 100;font-size: 20px">- повторник</span ></h2>
-             
+                <h2 class="title_day">четверг <br> <span style="color: black; font-weight: 100; font-size: 20px">- все заботы я отверг</span ></h2>
                 <div class="numbers">
-                    <span class="circle">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <span class="circle">5</span>
-                    <span class="circle">6</span>
-                    <span class="circle">7</span>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
                 </div>
             </div>
             
             <div class="day">
-                <h2 class="title_day">среда <br> <span style="color: black; font-weight: 100;font-size: 20px">- тамада</span ></h2>
+                <h2 class="title_day">пятница <br> <span style="color: black; font-weight: 100; font-size: 20px">- пьяница</span ></h2>
                 <div class="numbers">
-                    <span class="circle">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <span class="circle">5</span>
-                    <span class="circle">6</span>
-                    <span class="circle">7</span>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <h2 class="title_day">суббота <br> <span style="color: black; font-weight: 100; font-size: 20px">- не работа</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<div id="day2">
+            
+            <div class="day">
+                <h2 class="title_day">понедельник <br> <span style="color: black; font-weight: 100; font-size: 20px">- день бездельник</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+            
+            <div class="day">
+                <h2 class="title_day">вторник <br> <span style="color: black; font-weight: 100; font-size: 20px">- повторник</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+           
+            
+            <div class="day">
+                <h2 class="title_day">среда <br> <span style="color: black; font-weight: 100; font-size: 20px">- тамада</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <h2 class="title_day">четверг <br> <span style="color: black; font-weight: 100; font-size: 20px">- все заботы я отверг</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <h2 class="title_day">пятница <br> <span style="color: black; font-weight: 100; font-size: 20px">- пьяница</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Русский язычок </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <h2 class="title_day">суббота <br> <span style="color: black; font-weight: 100; font-size: 20px">- не работа</span ></h2>
+                <div class="numbers">
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">1</span> 
+							<div style="text-align: left; padding-left: 15px; visibility: visibility;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">2</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">3</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">4</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+					<div class="urok" style="display: flex;">
+                    	<span class="circle">5</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">6</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
+                    <div class="urok" style="display: flex;">
+                    	<span class="circle">7</span> 
+							<div style="text-align: left; padding-left: 15px;">
+								<p style="color: #202020;
+  									font-size: 18px;
+  									font-weight: 500; margin: 0;"> Математика </p>
+								<p style="color: #757575; font-size: 14px;
+  									font-weight: 400; margin-top:-6px;"> 8:00 - 9:35 </p>
+							</div>
+					</div>
                 </div>
             </div>
 
-<div class="day">
-                
- <h2 class="title_day"> четверг <br> <span style="color: black; font-weight: 100;font-size: 20px">- все заботы я отверг</span ></h2>
-             
-                <div class="numbers">
-                    <span class="circle">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <span class="circle">5</span>
-                    <span class="circle">6</span>
-                    <span class="circle">7</span>
-                </div>
-            </div>
-
-
-<div class="day">
-                
- <h2 class="title_day"> пятница <br> <span style="color: black; font-weight: 100;font-size: 20px">- пьяница</span ></h2>
-             
-                <div class="numbers">
-                    <span class="circle">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <span class="circle">5</span>
-                    <span class="circle">6</span>
-                    <span class="circle">7</span>
-                </div>
-            </div>
-
-<div class="day">
-                
- <h2 class="title_day"> суббота <br> <span style="color: black; font-weight: 100;font-size: 20px">- не работа</span ></h2>
-             
-                <div class="numbers">
-                    <span class="circle">1</span>
-                    <span class="circle">2</span>
-                    <span class="circle">3</span>
-                    <span class="circle">4</span>
-                    <span class="circle">5</span>
-                    <span class="circle">6</span>
-                    <span class="circle">7</span>
-                </div>
-            </div>
-
-			</div>
-
-<div class="day">
+</div>
                 
  <h2 class="title_day" style="font-size: 45px;line-height: 38px;"> воскресенье <br> <span style="color: black; font-weight: 100;font-size: 35px">- день веселья</span ></h2>
-             
+ <img src="https://ibb.co/FLZHYLLZ" alt="Каневский">
                
-            </div>
+ 
+
+
+
+
+
 
 
     </div>
     
-    
+    <script>
+		const toggleCheckbox = document.getElementById('toggleCheckbox');
+		const content1 = document.getElementById('day1');
+        const content2 = document.getElementById('day2');
+
+		// Слушаем изменения состояния чекбокса
+        toggleCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                content1.classList.add('hidden');
+				content2.classList.add('hidden');
+            } else {
+                content1.classList.remove('hidden');
+				content2.classList.remove('hidden');
+            }
+        });
+    </script>
+</div>
 </body>
 </html>
