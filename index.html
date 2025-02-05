@@ -1,434 +1,219 @@
 <!DOCTYPE html>
-<html lang="english">
-  <head>
-    <title>exported project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@440;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+		.title_day {
+              margin: 15px 0 15px 25px;
+              height: 46px;
+              font-family: Montserrat;
+              font-size: 25px;
+              font-weight: 700;
+              line-height: 23px;
+			text-align: left;
+		}
+		
+        .odd-week {
+            background: navy;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .even-week {
+            background: green;
+        }
+        .schedule .day {
+            background: white;
+            padding: 15px;
+            margin: 10px 0 30px 0;
+            border-radius: 40px;
+  background: linear-gradient(134deg, #ededed 0%, #ffffff 100%);
+  background-blend-mode: normal;
+  box-shadow: -26px -26px 50px rgba(255,255,255,0.9),
+              -26px 26px 50px rgba(216,216,216,0.2),
+              26px -26px 50px rgba(216,216,216,0.2),
+              26px 26px 50px rgba(216,216,216,0.9),
+              inset -1px -1px 2px rgba(216,216,216,0.5),
+              inset 1px 1px 2px rgba(255,255,255,0.3);
+        }
+        .numbers {
+            margin-left: 25px;
+			padding-bottom: 15px;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: navy;
+            color: white;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+
+
     </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+</head>
+<body>
+    <div class="container">
+        <h1 style="width: 384px;
+  height: 174px;
+  font-family: Montserrat;
+  font-size: 61px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: center;
+color: black;">добро<br> <span style="font-weight: 487;"> пожаловать </span> <br> <span style="font-weight: bold;"> сюда </span> </h1>
+        
+        <button id="toggle-week" class="odd-week">нечетная неделька</button>
+        
+        <div class="schedule">
+            <div class="day">
+                <h2 class="title_day">понедельник <br> <span style="color: black; font-weight: 100; font-size: 20px">- день бездельник</span ></h2>
+                <div class="numbers">
+                    <span class="circle">1</span>
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                    <span class="circle">6</span>
+                    <span class="circle">7</span>
+                </div>
+            </div>
+            
+            <div class="day">
+                
+ <h2 class="title_day">вторник <br> <span style="color: black; font-weight: 100;font-size: 20px">- повторник</span ></h2>
+             
+                <div class="numbers">
+                    <span class="circle">1</span>
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                    <span class="circle">6</span>
+                    <span class="circle">7</span>
+                </div>
+            </div>
+            
+            <div class="day">
+                <h2 class="title_day">среда <br> <span style="color: black; font-weight: 100;font-size: 20px">- тамада</span ></h2>
+                <div class="numbers">
+                    <span class="circle">1</span>
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                    <span class="circle">6</span>
+                    <span class="circle">7</span>
+                </div>
+            </div>
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
+<div class="day">
+                
+ <h2 class="title_day"> четверг <br> <span style="color: black; font-weight: 100;font-size: 20px">- все заботы я отверг</span ></h2>
+             
+                <div class="numbers">
+                    <span class="circle">1</span>
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                    <span class="circle">6</span>
+                    <span class="circle">7</span>
+                </div>
+            </div>
 
-        fill: var(--dl-color-theme-neutral-dark);
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
 
-      <div class="traced-image-container">
-        <div class="traced-image-traced-image">
-          <span class="traced-image-text10">
-            <span class="traced-image-text11">добро</span>
-            <br class="traced-image-text12" />
-            <span class="traced-image-text13">пожаловать</span>
-            <br />
-            <span class="traced-image-text15">сюда</span>
-          </span>
-          <div class="traced-image-group10">
-            <img
-              src="public/external/rectangle8i387-igs-400h.png"
-              alt="Rectangle8I387"
-              class="traced-image-rectangle8"
-            />
-            <img
-              src="public/external/rectangle9i387-fugh-200h.png"
-              alt="Rectangle9I387"
-              class="traced-image-rectangle9"
-            />
-            <span class="traced-image-text16">нечетная неделька</span>
-          </div>
-          <div class="traced-image-group11">
-            <span class="traced-image-text17">
-              <span class="traced-image-text18">понедельник</span>
-              <span> </span>
-              <br />
-              <span class="traced-image-text21">- день бездельник</span>
-            </span>
-            <div class="traced-image-group121">
-              <img
-                src="public/external/ellipse33976-22jq-200h.png"
-                alt="Ellipse33976"
-                class="traced-image-ellipse310"
-              />
+<div class="day">
+                
+ <h2 class="title_day"> пятница <br> <span style="color: black; font-weight: 100;font-size: 20px">- пьяница</span ></h2>
+             
+                <div class="numbers">
+                    <span class="circle">1</span>
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                    <span class="circle">6</span>
+                    <span class="circle">7</span>
+                </div>
             </div>
-            <div class="traced-image-group131">
-              <img
-                src="public/external/ellipse33977-hmi-200h.png"
-                alt="Ellipse33977"
-                class="traced-image-ellipse311"
-              />
+
+<div class="day">
+                
+ <h2 class="title_day"> суббота <br> <span style="color: black; font-weight: 100;font-size: 20px">- не работа</span ></h2>
+             
+                <div class="numbers">
+                    <span class="circle">1</span>
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                    <span class="circle">6</span>
+                    <span class="circle">7</span>
+                </div>
             </div>
-            <div class="traced-image-group141">
-              <img
-                src="public/external/ellipse33977-8prr-200h.png"
-                alt="Ellipse33977"
-                class="traced-image-ellipse312"
-              />
+
+			</div>
+
+<div class="day">
+                
+ <h2 class="title_day" style="font-size: 45px;line-height: 38px;"> воскресенье <br> <span style="color: black; font-weight: 100;font-size: 35px">- день веселья</span ></h2>
+             
+               
             </div>
-            <div class="traced-image-group151">
-              <img
-                src="public/external/ellipse33978-sghb-200h.png"
-                alt="Ellipse33978"
-                class="traced-image-ellipse313"
-              />
-            </div>
-            <div class="traced-image-group161">
-              <img
-                src="public/external/ellipse33979-krs7-200h.png"
-                alt="Ellipse33979"
-                class="traced-image-ellipse314"
-              />
-            </div>
-            <div class="traced-image-group171">
-              <img
-                src="public/external/ellipse33979-b9hk-200h.png"
-                alt="Ellipse33979"
-                class="traced-image-ellipse315"
-              />
-            </div>
-            <div class="traced-image-group181">
-              <img
-                src="public/external/ellipse33980-zp-200h.png"
-                alt="Ellipse33980"
-                class="traced-image-ellipse316"
-              />
-            </div>
-          </div>
-          <div class="traced-image-group122">
-            <span class="traced-image-text22">
-              <span class="traced-image-text23">вторник</span>
-              <span> - повторник</span>
-            </span>
-            <div class="traced-image-group123">
-              <img
-                src="public/external/ellipse3409-ow5-200h.png"
-                alt="Ellipse3409"
-                class="traced-image-ellipse317"
-              />
-            </div>
-            <div class="traced-image-group132">
-              <img
-                src="public/external/ellipse34012-k33c-200h.png"
-                alt="Ellipse34012"
-                class="traced-image-ellipse318"
-              />
-            </div>
-            <div class="traced-image-group142">
-              <img
-                src="public/external/ellipse34015-xv1fb-200h.png"
-                alt="Ellipse34015"
-                class="traced-image-ellipse319"
-              />
-            </div>
-            <div class="traced-image-group152">
-              <img
-                src="public/external/ellipse34018-341t-200h.png"
-                alt="Ellipse34018"
-                class="traced-image-ellipse320"
-              />
-            </div>
-            <div class="traced-image-group162">
-              <img
-                src="public/external/ellipse34021-n73-200h.png"
-                alt="Ellipse34021"
-                class="traced-image-ellipse321"
-              />
-            </div>
-            <div class="traced-image-group172">
-              <img
-                src="public/external/ellipse34024-2ola-200h.png"
-                alt="Ellipse34024"
-                class="traced-image-ellipse322"
-              />
-            </div>
-            <div class="traced-image-group182">
-              <img
-                src="public/external/ellipse34027-0bvg7-200h.png"
-                alt="Ellipse34027"
-                class="traced-image-ellipse323"
-              />
-            </div>
-          </div>
-          <div class="traced-image-group133">
-            <span class="traced-image-text25">
-              <span class="traced-image-text26">среда</span>
-              <span> - тамада</span>
-            </span>
-            <div class="traced-image-group124">
-              <img
-                src="public/external/ellipse34038-sey6-200h.png"
-                alt="Ellipse34038"
-                class="traced-image-ellipse324"
-              />
-            </div>
-            <div class="traced-image-group134">
-              <img
-                src="public/external/ellipse34041-hapb-200h.png"
-                alt="Ellipse34041"
-                class="traced-image-ellipse325"
-              />
-            </div>
-            <div class="traced-image-group143">
-              <img
-                src="public/external/ellipse34044-z9ru-200h.png"
-                alt="Ellipse34044"
-                class="traced-image-ellipse326"
-              />
-            </div>
-            <div class="traced-image-group153">
-              <img
-                src="public/external/ellipse34047-xd6-200h.png"
-                alt="Ellipse34047"
-                class="traced-image-ellipse327"
-              />
-            </div>
-            <div class="traced-image-group163">
-              <img
-                src="public/external/ellipse34050-gbw3-200h.png"
-                alt="Ellipse34050"
-                class="traced-image-ellipse328"
-              />
-            </div>
-            <div class="traced-image-group173">
-              <img
-                src="public/external/ellipse34053-63w2-200h.png"
-                alt="Ellipse34053"
-                class="traced-image-ellipse329"
-              />
-            </div>
-            <div class="traced-image-group183">
-              <img
-                src="public/external/ellipse34056-joqm-200h.png"
-                alt="Ellipse34056"
-                class="traced-image-ellipse330"
-              />
-            </div>
-          </div>
-          <div class="traced-image-group144">
-            <span class="traced-image-text28">
-              <span class="traced-image-text29">четверг</span>
-              <span> - все заботы я отверг</span>
-            </span>
-            <div class="traced-image-group125">
-              <img
-                src="public/external/ellipse34063-6ask-200h.png"
-                alt="Ellipse34063"
-                class="traced-image-ellipse331"
-              />
-            </div>
-            <div class="traced-image-group135">
-              <img
-                src="public/external/ellipse34066-mc7m-200h.png"
-                alt="Ellipse34066"
-                class="traced-image-ellipse332"
-              />
-            </div>
-            <div class="traced-image-group145">
-              <img
-                src="public/external/ellipse34069-0sz-200h.png"
-                alt="Ellipse34069"
-                class="traced-image-ellipse333"
-              />
-            </div>
-            <div class="traced-image-group154">
-              <img
-                src="public/external/ellipse34072-1eq9-200h.png"
-                alt="Ellipse34072"
-                class="traced-image-ellipse334"
-              />
-            </div>
-            <div class="traced-image-group164">
-              <img
-                src="public/external/ellipse34075-7e6-200h.png"
-                alt="Ellipse34075"
-                class="traced-image-ellipse335"
-              />
-            </div>
-            <div class="traced-image-group174">
-              <img
-                src="public/external/ellipse34078-31mo-200h.png"
-                alt="Ellipse34078"
-                class="traced-image-ellipse336"
-              />
-            </div>
-            <div class="traced-image-group184">
-              <img
-                src="public/external/ellipse34081-anga-200h.png"
-                alt="Ellipse34081"
-                class="traced-image-ellipse337"
-              />
-            </div>
-          </div>
-          <div class="traced-image-group155">
-            <span class="traced-image-text31">
-              <span class="traced-image-text32">пятница</span>
-              <span> - пьяница</span>
-            </span>
-            <div class="traced-image-group126">
-              <img
-                src="public/external/ellipse34090-slf-200h.png"
-                alt="Ellipse34090"
-                class="traced-image-ellipse338"
-              />
-            </div>
-            <div class="traced-image-group136">
-              <img
-                src="public/external/ellipse34093-8hx5-200h.png"
-                alt="Ellipse34093"
-                class="traced-image-ellipse339"
-              />
-            </div>
-            <div class="traced-image-group146">
-              <img
-                src="public/external/ellipse34096-0zeb-200h.png"
-                alt="Ellipse34096"
-                class="traced-image-ellipse340"
-              />
-            </div>
-            <div class="traced-image-group156">
-              <img
-                src="public/external/ellipse34099-s8bj-200h.png"
-                alt="Ellipse34099"
-                class="traced-image-ellipse341"
-              />
-            </div>
-            <div class="traced-image-group165">
-              <img
-                src="public/external/ellipse34010-cypa-200h.png"
-                alt="Ellipse34010"
-                class="traced-image-ellipse342"
-              />
-            </div>
-            <div class="traced-image-group175">
-              <img
-                src="public/external/ellipse34010-wgla-200h.png"
-                alt="Ellipse34010"
-                class="traced-image-ellipse343"
-              />
-            </div>
-            <div class="traced-image-group185">
-              <img
-                src="public/external/ellipse34010-q8jg-200h.png"
-                alt="Ellipse34010"
-                class="traced-image-ellipse344"
-              />
-            </div>
-          </div>
-          <div class="traced-image-group166">
-            <span class="traced-image-text34">
-              <span class="traced-image-text35">суббота</span>
-              <span> - не работа</span>
-            </span>
-            <div class="traced-image-group127">
-              <img
-                src="public/external/ellipse34011-g05s-200h.png"
-                alt="Ellipse34011"
-                class="traced-image-ellipse345"
-              />
-            </div>
-            <div class="traced-image-group137">
-              <img
-                src="public/external/ellipse34011-vvym-200h.png"
-                alt="Ellipse34011"
-                class="traced-image-ellipse346"
-              />
-            </div>
-            <div class="traced-image-group147">
-              <img
-                src="public/external/ellipse34012-4d9a-200h.png"
-                alt="Ellipse34012"
-                class="traced-image-ellipse347"
-              />
-            </div>
-            <div class="traced-image-group157">
-              <img
-                src="public/external/ellipse34012-xybc-200h.png"
-                alt="Ellipse34012"
-                class="traced-image-ellipse348"
-              />
-            </div>
-            <div class="traced-image-group167">
-              <img
-                src="public/external/ellipse34012-p8yg-200h.png"
-                alt="Ellipse34012"
-                class="traced-image-ellipse349"
-              />
-            </div>
-            <div class="traced-image-group176">
-              <img
-                src="public/external/ellipse34013-vmgu-200h.png"
-                alt="Ellipse34013"
-                class="traced-image-ellipse350"
-              />
-            </div>
-            <div class="traced-image-group186">
-              <img
-                src="public/external/ellipse34013-v3q-200h.png"
-                alt="Ellipse34013"
-                class="traced-image-ellipse351"
-              />
-            </div>
-          </div>
-          <div class="traced-image-group19">
-            <span class="traced-image-text37">
-              <span class="traced-image-text38">воскресенье</span>
-              <span> - день веселья</span>
-            </span>
-            <img
-              src="public/external/image94016-rrz-300w.png"
-              alt="image94016"
-              class="traced-image-image9"
-            />
-          </div>
+
+
         </div>
-      </div>
     </div>
-  </body>
+    
+    <script>
+        document.getElementById("toggle-week").addEventListener("click", function() {
+            let button = this;
+            let circles = document.querySelectorAll(".circle");
+            if (button.classList.contains("odd-week")) {
+                button.classList.remove("odd-week");
+                button.classList.add("even-week");
+                button.textContent = "четная неделька";
+                circles.forEach(circle => circle.style.background = "green");
+            } else {
+                button.classList.remove("even-week");
+                button.classList.add("odd-week");
+                button.textContent = "нечетная неделька";
+                circles.forEach(circle => circle.style.background = "navy");
+            }
+        });
+    </script>
+</body>
 </html>
