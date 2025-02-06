@@ -890,7 +890,29 @@ display: block;
         });
 
 
+	     let timeout; 
 
+function showPopup(popupId) {
+    clearTimeout(timeout); // Очищаем предыдущий таймер
+
+    // Скрываем все плашки перед открытием новой
+    document.querySelectorAll('.popup').forEach(popup => {
+        popup.style.display = "none";
+    });
+
+    // Используем requestAnimationFrame для моментального обновления
+    requestAnimationFrame(() => {
+        let popup = document.getElementById(popupId);
+        popup.style.display = "flex";
+
+        // Запускаем таймер на скрытие через 2 секунды
+        timeout = setTimeout(() => {
+            popup.style.display = "none";
+        }, 2000);
+    });
+}
+
+<!--
         function showPopup1() {
             let popup = document.getElementById("popup1");
             popup.style.display = "flex";
@@ -962,7 +984,7 @@ display: block;
                 popup.style.display = "none";
             }, 2000);
         }
-
+-->
     </script>
 </div>
 </body>
