@@ -430,14 +430,14 @@ display: block;
                 <div class="numbers">
 					<div class="urok" style="display: flex;">
                     	<span class="circle">1</span> 
-							<div onclick="showPopup('popup4')" style="text-align: left; padding-left: 10px; visibility: hidden;">
+							<div onclick="showPopup('popup4')" style="text-align: left; padding-left: 10px; display: none;">
 								<p class="name_urok"> Управление данными (лабы) </p>
 								<p class="time_style"> 7:30 - 9:05 <span style="color: navy;"> &nbsp;&nbsp;4405 </span>  </p>
 							</div>
 					</div>
 					<div class="urok" style="display: flex;">
                     	<span class="circle">2</span> 
-							<div onclick="showPopup('popup4')" style="text-align: left; padding-left: 10px;visibility: hidden;  ">
+							<div onclick="showPopup('popup4')" style="text-align: left; padding-left: 10px;display: none;  ">
 								<p class="name_urok"> Управление данными (лабы) </p>
 								<p class="time_style"> 9:20 - 10:55 <span style="color: navy;"> &nbsp;&nbsp;4405 </span> </p>
 							</div>
@@ -821,7 +821,7 @@ display: block;
                 <h2 class="title_day">суббота <br> <span style="color: black; font-weight: 400; font-size: 20px">- не работа</span ></h2>
                 <div class="numbers">
 
-                    <p> Дата: <span id="current-date"></span> </p>
+                    <p> Дата: <span id="current-date1"></span> </p>
 
 					<div class="urok" style="display: flex;">
                     	<span class="circle22">15.03</span> 
@@ -929,9 +929,11 @@ display: block;
             const day = String(now.getDate()).padStart(2, '0'); // День (добавляем ведущий ноль)
             const month = String(now.getMonth() + 1).padStart(2, '0'); // Месяц (добавляем ведущий ноль)
             const formattedDate = `${day}.${month}`; // Форматируем дату в "дд.мм"
+	    const formattedDate1 = `${day}.${month}`;
 
             // Вставляем отформатированную дату в элемент с id="current-date"
             document.getElementById('current-date').textContent = formattedDate;
+	    document.getElementById('current-date1').textContent = formattedDate1;
         }
 
         // Обновляем дату каждую секунду
