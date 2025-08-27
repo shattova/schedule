@@ -65,9 +65,15 @@
               inset 1px 1px 2px rgba(255,255,255,0.3);
         }
 
-		.day1.hidden {
-        	display: none;
-		}
+		#day1.hidden,
+#day2.hidden {
+    display: none;
+}
+
+#day1,
+#day2 {
+    display: block;
+}
 
 		
         .numbers {
@@ -218,17 +224,6 @@
 		
 	}
 
-#day1.hidden {
-display: none;
-}
-
-#day2 {
-display: none;
-}
-
-#day2.hidden {
-display: block;
-}
 
 /* Подложка */
 
@@ -909,19 +904,21 @@ display: block;
     
     <script>
 		const toggleCheckbox = document.getElementById('toggleCheckbox');
-		const content1 = document.getElementById('day1');
-        const content2 = document.getElementById('day2');
+const content1 = document.getElementById('day1');
+const content2 = document.getElementById('day2');
 
-		// Слушаем изменения состояния чекбокса
-        toggleCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                content1.classList.add('hidden');
-				content2.classList.add('hidden');
-            } else {
-                content1.classList.remove('hidden');
-				content2.classList.remove('hidden');
-            }
-        });
+// Слушаем изменения состояния чекбокса
+toggleCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        // Показываем четную неделю, скрываем нечетную
+        content1.classList.add('hidden');
+        content2.classList.remove('hidden');
+    } else {
+        // Показываем нечетную неделю, скрываем четную
+        content1.classList.remove('hidden');
+        content2.classList.add('hidden');
+    }
+});
 
 
     // Функция для обновления даты
