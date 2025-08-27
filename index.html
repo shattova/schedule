@@ -921,28 +921,7 @@ toggleCheckbox.addEventListener('change', function() {
 });
 
 
-    // Функция для обновления даты
-    function updateDate() {
-            const now = new Date(); // Получаем текущую дату и время
-            const day = String(now.getDate()).padStart(2, '0'); // День (добавляем ведущий ноль)
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // Месяц (добавляем ведущий ноль)
-            const formattedDate = `${day}.${month}`; // Форматируем дату в "дд.мм"
-	    const formattedDate1 = `${day}.${month}`;
-
-            // Вставляем отформатированную дату в элемент с id="current-date"
-            document.getElementById('current-date').textContent = formattedDate;
-	    document.getElementById('current-date1').textContent = formattedDate1;
-        }
-
-        // Обновляем дату каждую секунду
-        setInterval(updateDate, 1000);
-
-        // Вызываем функцию сразу при загрузке страницы
-        updateDate();
-
-
-
-        let timeout; // Хранит текущий таймер
+   
 
 function showPopup(popupId) {
     clearTimeout(timeout); // Сброс предыдущего таймера
