@@ -916,7 +916,8 @@ toggleCheckbox.addEventListener('change', function() {
 });
 
 
-   
+   let timeout; // ← объявляем один раз, до функций
+
 
 function showPopup(popupId) {
     clearTimeout(timeout); // Сброс предыдущего таймера
